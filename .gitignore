@@ -1,0 +1,11 @@
+node_modules/
+dist/
+target/
+*~
+*.swp
+*.swn
+*.swm
+*.swo
+*.swk
+*.swl
+*rs:*
