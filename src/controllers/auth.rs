@@ -84,15 +84,15 @@ pub async fn user_auth_post(
                 }
                 }
                 Ok(_) => {
-                    Ok(HttpResponse::Unauthorized().body("Неверные учетные данные")) 
+                    Ok(HttpResponse::Unauthorized().body("Incorrect credentials")) 
                 }
                 Err(_) => {
-                    Ok(HttpResponse::InternalServerError().body("Ошибка при проверке пароля")) 
+                    Ok(HttpResponse::InternalServerError().body("Error checking password")) 
                 }
             }
         }
         None => {
-            Ok(HttpResponse::NotFound().body("Пользователь не найден")) 
+            Ok(HttpResponse::NotFound().body("User not found")) 
         }
     }
 }
